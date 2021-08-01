@@ -7,11 +7,9 @@ import (
 	"strconv"
 
 //	rpc "github.com/node-a-team/Cosmos-IE/chains/cosmos/getData/rpc"
-	#rest "github.com/node-a-team/Cosmos-IE/chains/osmosis/getData/rest"
-	#metric "github.com/node-a-team/Cosmos-IE/chains/osmosis/exporter/metric"
 	rest "github.com/CyberObiOne/Cosmos-IE/chains/osmosis/getData/rest"
 	metric "github.com/CyberObiOne/Cosmos-IE/chains/osmosis/exporter/metric"
-	utils "github.com/node-a-team/Cosmos-IE/utils"
+	utils "github.com/CyberObiOne/Cosmos-IE/utils"
 
 	"github.com/prometheus/client_golang/prometheus"
 )
