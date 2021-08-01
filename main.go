@@ -16,7 +16,7 @@ limitations under the License.
 package main
 
 import (
-	"github.com/node-a-team/Cosmos-IE/cmd"
+	"github.com/CyberObiOne/Cosmos-IE/cmd"
 )
 
 var (
