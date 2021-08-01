@@ -8,7 +8,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-	"github.com/node-a-team/Cosmos-IE/chains/osmosis/exporter"
+	#"github.com/node-a-team/Cosmos-IE/chains/osmosis/exporter"
+	"github.com/CyberObiOne/Cosmos-IE/chains/osmosis/exporter"
 )
 
 const (
