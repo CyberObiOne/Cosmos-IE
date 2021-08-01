@@ -19,10 +19,10 @@ func set_config() {
 	common.Addr = restAddr
         common.OperAddr = operAddr
 
-//	switch chain {
-//        case "cosmos":
-//                cosmos.Addr = restAddr
-//                cosmos.OperAddr = operAddr
+	switch chain {
+        case "osmosis":
+                osmosis.Addr = restAddr
+                osmosis.OperAddr = operAddr
 /*        case "terra":
 		terra.FeeDenom = feeDenom
 */
