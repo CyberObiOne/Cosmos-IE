@@ -11,7 +11,7 @@ import (
 var (
 	metricData metric
 
-	DenomList = []string{"uatom"}
+	DenomList = []string{"uosmo"}
 	GaugesNamespaceList = [...]string{"blockHeight",
 				"notBondedTokens",
 				"bondedTokens",
