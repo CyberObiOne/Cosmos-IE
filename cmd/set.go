@@ -9,8 +9,8 @@ import (
 
 //	  terra "github.com/node-a-team/Cosmos-IE/rest/chains/terra"
 
-        common "github.com/node-a-team/Cosmos-IE/rest/common"
-
+//        common "github.com/node-a-team/Cosmos-IE/rest/common"
+	common "github.com/CyberOniOne/Cosmos-IE/chains/osmosis/getData/rest"
 //	rpc_iov "github.com/node-a-team/Cosmos-IE/chains/iov/getData/rpc"
 )
 
@@ -19,10 +19,10 @@ func set_config() {
 	common.Addr = restAddr
         common.OperAddr = operAddr
 
-	switch chain {
-        case "osmosis":
-                osmosis.Addr = restAddr
-                osmosis.OperAddr = operAddr
+//	switch chain {
+//        case "cosmos":
+//               cosmos.Addr = restAddr
+//                cosmos.OperAddr = operAddr
 /*        case "terra":
 		terra.FeeDenom = feeDenom
 */
