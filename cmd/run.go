@@ -89,10 +89,10 @@ func run() {
 //                        iov.Main(listenPort)
 //		case "band":
 //                        band.Main(listenPort)
-		case "osmosis":
-                        osmosis.Main(listenPort)
-//		default:
-//			exporter.Go(chain, listenPort)
+//		case "osmosis":
+//                        osmosis.Main(listenPort)
+		default:
+			exporter.Go(chain, listenPort)
 
         }
 }
