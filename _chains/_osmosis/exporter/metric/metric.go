@@ -3,7 +3,8 @@ package metric
 import (
 	"go.uber.org/zap"
 
-	rest "github.com/node-a-team/Cosmos-IE/chains/osmosis/getData/rest"
+	#rest "github.com/node-a-team/Cosmos-IE/chains/osmosis/getData/rest"
+	rest "github.com/CyberObiOne/Cosmos-IE/chains/osmosis/getData/rest"
 //	rpc "github.com/node-a-team/Cosmos-IE/chains/osmosis/getData/rpc"
 	utils "github.com/node-a-team/Cosmos-IE/utils"
 )
