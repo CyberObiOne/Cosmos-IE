@@ -127,6 +127,8 @@ func getDenomList(chain string) []string {
 	switch chain{
 	case "cosmos":
 		dList = []string{"uatom"}
+	case "osmosis":
+		dList = []string{"uosmo"}
 	case "iris":
 		dList = []string{"uiris"}
 //		dList = []string{"ubif"}
