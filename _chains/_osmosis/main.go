@@ -12,19 +12,12 @@ import (
 	"github.com/CyberObiOne/Cosmos-IE/chains/osmosis/exporter"
 )
 
-var (
-)
 
 func Main(port string) {
 
 	log,_ := zap.NewDevelopment()
         defer log.Sync()
 
-	config := sdk.GetConfig()
-	config.SetBech32PrefixForAccount(core.Bech32PrefixAccAddr, core.Bech32PrefixAccPub)
-	config.SetBech32PrefixForValidator(core.Bech32PrefixValAddr, core.Bech32PrefixValPub)
-	config.SetBech32PrefixForConsensusNode(core.Bech32PrefixConsAddr, core.Bech32PrefixConsPub)
-	config.Seal()
 
 	http.Handle("/metrics", promhttp.Handler())
 	go exporter.Start(log)
