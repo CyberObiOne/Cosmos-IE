@@ -12,7 +12,7 @@ import (
 	"github.com/CyberObiOne/Cosmos-IE/chains/osmosis/exporter"
 )
 
-const (
+var (
 )
 
 func Main(port string) {
