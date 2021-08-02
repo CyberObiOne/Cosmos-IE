@@ -71,8 +71,7 @@ func setConfig(chain string) {
 		config.SetBech32PrefixForAccount(accountPrefix, accountPrefix+sdk.PrefixPublic)
 		config.SetBech32PrefixForValidator(validatorPrefix, validatorPrefix+sdk.PrefixPublic)
 		config.SetBech32PrefixForConsensusNode(consensusPrefix, consensusPrefix+sdk.PrefixPublic)
-		config.SetCoinType(bip44CoinType)
-
+		
 		fmt.Println(accountPrefix, validatorPrefix, consensusPrefix)
 
 	case "terra":
