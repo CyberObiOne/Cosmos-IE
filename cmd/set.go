@@ -9,7 +9,7 @@ import (
 
 //	  terra "github.com/node-a-team/Cosmos-IE/rest/chains/terra"
 
-       common "github.com/CyberObiOne/Cosmos-IE/rest/common"
+       common "github.com/node-a-team/Cosmos-IE/rest/common"
 //	common "github.com/CyberObiOne/Cosmos-IE/chains/osmosis/getData/rest"
 //	rpc_iov "github.com/node-a-team/Cosmos-IE/chains/iov/getData/rpc"
 )
