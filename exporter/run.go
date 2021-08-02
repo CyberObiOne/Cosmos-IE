@@ -67,10 +67,18 @@ func setConfig(chain string) {
 		accountPrefix := bech32MainPrefix
 		validatorPrefix := bech32MainPrefix + sdk.PrefixValidator + sdk.PrefixOperator
 		consensusPrefix := bech32MainPrefix + sdk.PrefixValidator + sdk.PrefixConsensus
-
-		config.SetBech32PrefixForAccount(accountPrefix, accountPrefix+sdk.PrefixPublic)
-		config.SetBech32PrefixForValidator(validatorPrefix, validatorPrefix+sdk.PrefixPublic)
-		config.SetBech32PrefixForConsensusNode(consensusPrefix, consensusPrefix+sdk.PrefixPublic)
+		Bech32PrefixAccPub := Bech32PrefixAccAddr + "pub"
+		Bech32PrefixValAddr := Bech32PrefixAccAddr + "valoper"
+		Bech32PrefixValPub := Bech32PrefixAccAddr + "valoperpub"
+		Bech32PrefixConsAddr := Bech32PrefixAccAddr + "valcons"
+		Bech32PrefixConsPub := Bech32PrefixAccAddr + "valconspub"
+		
+		config := sdk.GetConfig()
+		config.SetBech32PrefixForAccount(Bech32PrefixAccAddr, Bech32PrefixAccPub)
+		config.SetBech32PrefixForValidator(Bech32PrefixValAddr, Bech32PrefixValPub)
+		config.SetBech32PrefixForConsensusNode(Bech32PrefixConsAddr, Bech32PrefixConsPub)
+		
+		
 		
 		fmt.Println(accountPrefix, validatorPrefix, consensusPrefix)
 
