@@ -64,9 +64,6 @@ func setConfig(chain string) {
 	case "osmosis":
 		bech32MainPrefix := "osmo"
 		
-		accountPrefix := bech32MainPrefix
-		validatorPrefix := bech32MainPrefix + sdk.PrefixValidator + sdk.PrefixOperator
-		consensusPrefix := bech32MainPrefix + sdk.PrefixValidator + sdk.PrefixConsensus
 		Bech32PrefixAccPub := Bech32PrefixAccAddr + "pub"
 		Bech32PrefixValAddr := Bech32PrefixAccAddr + "valoper"
 		Bech32PrefixValPub := Bech32PrefixAccAddr + "valoperpub"
