@@ -14,9 +14,9 @@ import (
 //        emoney "github.com/node-a-team/Cosmos-IE/chains/emoney"
 //        band "github.com/node-a-team/Cosmos-IE/chains/bandprotocol"
 
-//	exporter "github.com/CyberObiOne/Cosmos-IE/exporter"
+	exporter "github.com/CyberObiOne/Cosmos-IE/exporter"
 	
-	exporter "github.com/CyberObiOne/Cosmos-IE/chains/osmosis"
+//	exporter "github.com/CyberObiOne/Cosmos-IE/chains/osmosis"
 )
 
 var (
