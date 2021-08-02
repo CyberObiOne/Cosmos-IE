@@ -60,6 +60,20 @@ func setConfig(chain string) {
 		config.SetCoinType(bip44CoinType)
 
 //		fmt.Println(accountPrefix, validatorPrefix, consensusPrefix)
+		
+	case "osmosis":
+		bech32MainPrefix := "osmo"
+		
+		accountPrefix := bech32MainPrefix
+		validatorPrefix := bech32MainPrefix + sdk.PrefixValidator + sdk.PrefixOperator
+		consensusPrefix := bech32MainPrefix + sdk.PrefixValidator + sdk.PrefixConsensus
+
+		config.SetBech32PrefixForAccount(accountPrefix, accountPrefix+sdk.PrefixPublic)
+		config.SetBech32PrefixForValidator(validatorPrefix, validatorPrefix+sdk.PrefixPublic)
+		config.SetBech32PrefixForConsensusNode(consensusPrefix, consensusPrefix+sdk.PrefixPublic)
+		config.SetCoinType(bip44CoinType)
+
+//		fmt.Println(accountPrefix, validatorPrefix, consensusPrefix)
 
 	case "terra":
 	        config.SetCoinType(terra.CoinType)
