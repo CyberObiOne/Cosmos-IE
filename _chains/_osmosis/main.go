@@ -18,7 +18,13 @@ func Main(port string) {
 	log,_ := zap.NewDevelopment()
         defer log.Sync()
 
-
+	config := sdk.GetConfig()
+	config.SetBech32PrefixForAccount(sdk.Bech32MainPrefix, sdk.Bech32PrefixAccPub)
+	config.SetBech32PrefixForValidator(sdk.Bech32PrefixValAddr , sdk.Bech32PrefixValPub)
+	config.SetBech32PrefixForConsensusNode(sdk.Bech32PrefixConsAddr, sdk.Bech32PrefixConsPub)
+	config.Seal()
+	
+	
 	http.Handle("/metrics", promhttp.Handler())
 	go exporter.Start(log)
 
