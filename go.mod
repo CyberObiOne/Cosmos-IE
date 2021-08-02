@@ -14,7 +14,6 @@ require (
 	github.com/spf13/viper v1.7.1
 	github.com/tendermint/tendermint v0.34.7
 	github.com/terra-project/core v0.4.2
-	github.com/osmosis-labs/osmosis
 	go.uber.org/zap v1.15.0
 )
 
