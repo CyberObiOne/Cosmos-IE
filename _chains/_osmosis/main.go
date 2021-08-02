@@ -12,17 +12,39 @@ import (
 	"github.com/CyberObiOne/Cosmos-IE/chains/osmosis/exporter"
 )
 
+const (
+	// AddrLen defines a valid address length
+	AddrLen = 20
+	// Bech32PrefixAccAddr defines the Bech32 prefix of an account's address
+	Bech32MainPrefix = "osmosis"
 
-func Main(port string) {
+	// PrefixAccount is the prefix for account keys
+	PrefixAccount = "acc"
+	// PrefixValidator is the prefix for validator keys
+	PrefixValidator = "val"
+	// PrefixConsensus is the prefix for consensus keys
+	PrefixConsensus = "cons"
+	// PrefixPublic is the prefix for public keys
+	PrefixPublic = "pub"
+	// PrefixOperator is the prefix for operator keys
+	PrefixOperator = "oper"
 
-	log,_ := zap.NewDevelopment()
-        defer log.Sync()
+	// PrefixAddress is the prefix for addresses
+	PrefixAddress = "addr"
 
-	config := sdk.GetConfig()
-	config.SetBech32PrefixForAccount(sdk.Bech32MainPrefix, sdk.Bech32PrefixAccPub)
-	config.SetBech32PrefixForValidator(sdk.Bech32PrefixValAddr , sdk.Bech32PrefixValPub)
-	config.SetBech32PrefixForConsensusNode(sdk.Bech32PrefixConsAddr, sdk.Bech32PrefixConsPub)
-	config.Seal()
+	// Bech32PrefixAccAddr defines the Bech32 prefix of an account's address
+	Bech32PrefixAccAddr = Bech32MainPrefix
+	// Bech32PrefixAccPub defines the Bech32 prefix of an account's public key
+	Bech32PrefixAccPub = Bech32MainPrefix + PrefixPublic
+	// Bech32PrefixValAddr defines the Bech32 prefix of a validator's operator address
+	Bech32PrefixValAddr = Bech32MainPrefix + PrefixValidator + PrefixOperator
+	// Bech32PrefixValPub defines the Bech32 prefix of a validator's operator public key
+	Bech32PrefixValPub = Bech32MainPrefix + PrefixValidator + PrefixOperator + PrefixPublic
+	// Bech32PrefixConsAddr defines the Bech32 prefix of a consensus node address
+	Bech32PrefixConsAddr = Bech32MainPrefix + PrefixValidator + PrefixConsensus
+	// Bech32PrefixConsPub defines the Bech32 prefix of a consensus node public key
+	Bech32PrefixConsPub = Bech32MainPrefix + PrefixValidator + PrefixConsensus + PrefixPublic
+)
 	
 	
 	http.Handle("/metrics", promhttp.Handler())
