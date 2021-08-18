@@ -73,7 +73,7 @@ func setConfig(chain string) {
 		config.SetBech32PrefixForValidator(validatorPrefix, validatorPrefix+sdk.PrefixPublic)
 		config.SetBech32PrefixForConsensusNode(consensusPrefix, consensusPrefix+sdk.PrefixPublic)
 		
-	case "osmosis":
+	case "bostrom":
 		Bech32MainPrefix := "bostrom"		
                 Bech32PrefixAccAddr = Bech32Prefix
 	        // Bech32PrefixAccPub defines the Bech32 prefix of an account's public key
