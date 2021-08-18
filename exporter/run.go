@@ -86,6 +86,9 @@ func setConfig(chain string) {
 	        Bech32PrefixConsAddr = Bech32Prefix + sdk.PrefixValidator + sdk.PrefixConsensus
 	        // Bech32PrefixConsPub defines the Bech32 prefix of a consensus node public key
 	        Bech32PrefixConsPub = Bech32Prefix + sdk.PrefixValidator + sdk.PrefixConsensus + sdk.PrefixPublic
+		config.SetBech32PrefixForAccount(accountPrefix, accountPrefix+sdk.PrefixPublic)
+		config.SetBech32PrefixForValidator(validatorPrefix, validatorPrefix+sdk.PrefixPublic)
+		config.SetBech32PrefixForConsensusNode(consensusPrefix, consensusPrefix+sdk.PrefixPublic)
 
 	case "terra":
 	        config.SetCoinType(terra.CoinType)
