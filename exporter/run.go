@@ -72,8 +72,20 @@ func setConfig(chain string) {
 		config.SetBech32PrefixForAccount(accountPrefix, accountPrefix+sdk.PrefixPublic)
 		config.SetBech32PrefixForValidator(validatorPrefix, validatorPrefix+sdk.PrefixPublic)
 		config.SetBech32PrefixForConsensusNode(consensusPrefix, consensusPrefix+sdk.PrefixPublic)
-				
-		fmt.Println(accountPrefix, validatorPrefix, consensusPrefix)
+		
+	case "osmosis":
+		Bech32MainPrefix := "bostrom"		
+                Bech32PrefixAccAddr = Bech32Prefix
+	        // Bech32PrefixAccPub defines the Bech32 prefix of an account's public key
+	        Bech32PrefixAccPub = Bech32Prefix + sdk.PrefixPublic
+	        // Bech32PrefixValAddr defines the Bech32 prefix of a validator's operator address
+	        Bech32PrefixValAddr = Bech32Prefix + sdk.PrefixValidator + sdk.PrefixOperator
+	        // Bech32PrefixValPub defines the Bech32 prefix of a validator's operator public key
+	        Bech32PrefixValPub = Bech32Prefix + sdk.PrefixValidator + sdk.PrefixOperator + sdk.PrefixPublic
+	        // Bech32PrefixConsAddr defines the Bech32 prefix of a consensus node address
+	        Bech32PrefixConsAddr = Bech32Prefix + sdk.PrefixValidator + sdk.PrefixConsensus
+	        // Bech32PrefixConsPub defines the Bech32 prefix of a consensus node public key
+	        Bech32PrefixConsPub = Bech32Prefix + sdk.PrefixValidator + sdk.PrefixConsensus + sdk.PrefixPublic
 
 	case "terra":
 	        config.SetCoinType(terra.CoinType)
